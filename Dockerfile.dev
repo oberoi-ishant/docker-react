@@ -1,0 +1,28 @@
+# run command without docker compose
+# docker run -it -p 3000:3000 -v /app/node_modules -v $(pwd):/app <container-id>
+
+# Tests
+
+# 1. To run test docker run -it  <containerID> npm test. But changes to
+# test file will not affect as no -v volume group set up so,
+# To get volume group, run docker-compose up and then in new terminal run docker ps to get the
+# container id and run docker exec -it containerID npm test
+# this runs command npm test inside already brought up container
+
+# Specify the base image
+FROM node:alpine
+
+# Specify working directory
+WORKDIR '/app'
+
+# COPY package json
+COPY package.json ./
+
+# install dependencies
+RUN npm install
+
+# Copy source files
+COPY ./ ./
+
+# Specify Default command
+CMD ["npm", "run", "start"]
