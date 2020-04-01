@@ -16,7 +16,7 @@ COPY ./ ./
 # run npm build to build prod version of app
 RUN npm run build
 
-# stage2: Use ngnix to server the build folder contents
+# stage2: Use ngnix to serve the build folder contents
 # Specify the FROM command to start new stage.
 # One phase/stage/block can have only ONE FROM statement
 FROM nginx
