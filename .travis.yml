@@ -1,4 +1,7 @@
+# to tell that admin access is required.
 sudo: required
+
+# a docker container will be required.
 services:
   - docker
 
