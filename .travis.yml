@@ -1,5 +1,8 @@
+# tutorial link https://www.udemy.com/course/docker-and-kubernetes-the-complete-guide/learn/lecture/11437116#questions
 # Check yahoo mail with sub Docker react travis AWS details
 # have some details in there. oberoiishant@yahoo.com
+# This app is hosted on your personal github
+
 # to tell that admin access is required.
 sudo: required
 
@@ -15,7 +18,18 @@ before_install:
 script:
   - docker run -e CI=true ishantoberoi/docker-react npm run test
 
-# app address http://dockerreact-env.eba-gbjmp2i6.us-east-2.elasticbeanstalk.com/
+# Steps:
+# 1. Login to aws
+# 2. Create an elastic beanstalk application (web server)
+# 3. Go to S3 bucket. find the elasticbeanstalk bucket for you region.
+# like elasticbeanstalk-us-east-2-041151477266. Here you app folder will be created.
+# So in config give bucket_path as you app name.
+# 4. Go to IAM service. Create user with elasticbeanstalkfullaccess permission
+# 5. Save the access_key_id and secret_access_key and add them as environment
+# variables in travis ci. Use env variables with $ like $AWS_ACCESS_KEY below.
+
+
+# app address http://docerreactapp-env.eba-dexmjzap.us-east-2.elasticbeanstalk.com/
 # AWS_ACCESS_KEY and AWS_SECRET_KEY configured in travis as environement
 # variables https://travis-ci.org/github/oberoi-ishant/docker-react/settings
 # for security reasons as our repository on github is public.
