@@ -18,6 +18,9 @@ function App() {
         >
           Learn React brother!
         </a>
+        <p>
+          Congratulations for your first app on AWS!
+        </p>
       </header>
     </div>
   );
