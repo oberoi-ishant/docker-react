@@ -34,18 +34,18 @@ script:
 # variables https://travis-ci.org/github/oberoi-ishant/docker-react/settings
 # for security reasons as our repository on github is public.
 # Below is how elasticbeanstalk page heading will look like on aws. From this:
-# All Applications  docer-react-app  DocerReactApp-env  Environment ID: e-cpdhm6hmvm, URL: DocerReactApp-env.eba-dexmjzap.us-east-2.elasticbeanstalk.com
-# app -> app name (docer-react-app)
-# env -> app env name (DocerReactApp-env)
+# All Applications  docker-react-practice  DockerReactPractice-env  Environment ID: e-j2z5ypryvi, URL: DockerReactPractice-env.eba-fqmqj4rj.us-east-2.elasticbeanstalk.com
+# app -> app name (docker-react-practice)
+# env -> app env name (DockerReactPractice-env)
 # bucket_name -> aws - serives - s3 - name for your region elasticbeanstalk-us-east-2
 # bucket_path: your app name in the bucket
 deploy:
   provider: elasticbeanstalk
   region: "us-east-2"
-  app: "docer-react-app"
-  env: "DocerReactApp-env"
+  app: "docker-react-practice"
+  env: "DockerReactPractice-env"
   bucket_name: "elasticbeanstalk-us-east-2-041151477266"
-  bucket_path: "docer-react-app"
+  bucket_path: "docker-react-practice"
   on:
     branch: master
   access_key_id: $AWS_ACCESS_KEY

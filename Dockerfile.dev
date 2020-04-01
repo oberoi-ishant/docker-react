@@ -8,6 +8,7 @@
 # To get volume group, run docker-compose up and then in new terminal run docker ps to get the
 # container id and run docker exec -it containerID npm test
 # this runs command npm test inside already brought up container
+# Or make use of docker-compose.yml
 
 # Specify the base image
 FROM node:alpine

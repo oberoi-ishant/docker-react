@@ -1,3 +1,6 @@
+# create two service using docker-compose.
+# one for runnning the app and serving on browser. Name is say web
+# second to just run the test command. So no port mapping required.
 version: "3"
 services:
   web:
