@@ -13,12 +13,13 @@ before_install:
 script:
   - docker run -e CI=true ishantoberoi/docker-react npm run test
 
+# app address http://dockerreact-env.eba-gbjmp2i6.us-east-2.elasticbeanstalk.com/
 # AWS_ACCESS_KEY and AWS_SECRET_KEY configured in travis as environement
 # variables https://travis-ci.org/github/oberoi-ishant/docker-react/settings
 # for security reasons as our repository on github is public.
 # app -> app name
 # env -> app env name
-# bucket_name -> aws - serives - s3 - name for your region us-east-2
+# bucket_name -> aws - serives - s3 - name for your region elasticbeanstalk-us-east-2
 # bucket_path: your app name in the bucket
 deploy:
   provider: elasticbeanstalk
@@ -31,4 +32,4 @@ deploy:
     branch: master
   access_key_id: $AWS_ACCESS_KEY
   secret_access_key:
-    secure: "$AWS_SECRET_KEY"
+    secure: $AWS_SECRET_KEY
