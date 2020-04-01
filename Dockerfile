@@ -21,6 +21,12 @@ RUN npm run build
 # One phase/stage/block can have only ONE FROM statement
 FROM nginx
 
+# This is used to tell aws beanstalk to expose a port 80.
+# So wherever your app is  hosted on aws it will automatically do
+# port mapping using this.
+# for our normal running of this docker file on our machine it
+# will do nothing.
+EXPOSE 80
 # COPY the generated build folder from stage1 to the predefined
 # directory /usr/share/ngnix/html in ngnix image
 # https://hub.docker.com/_/nginx

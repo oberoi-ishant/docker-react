@@ -17,8 +17,10 @@ script:
 # AWS_ACCESS_KEY and AWS_SECRET_KEY configured in travis as environement
 # variables https://travis-ci.org/github/oberoi-ishant/docker-react/settings
 # for security reasons as our repository on github is public.
-# app -> app name
-# env -> app env name
+# Below is how elasticbeanstalk page heading will look like on aws. From this:
+# All Applications  docker-react  DockerReact-env  Environment ID: e-maapwmvffp, URL: DockerReact-env.eba-gbjmp2i6.us-east-2.elasticbeanstalk.com
+# app -> app name (docker-react)
+# env -> app env name (DockerReact-env)
 # bucket_name -> aws - serives - s3 - name for your region elasticbeanstalk-us-east-2
 # bucket_path: your app name in the bucket
 deploy:
