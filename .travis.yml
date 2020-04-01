@@ -5,5 +5,7 @@ services:
 before_install:
   - docker build -t ishantoberoi/docker-react -f Dockerfile.dev .
 
+# Using the command with -e CI=true as there is some issue with jest
+# we do not get the exit status 0 after the run test is completed.
 script:
   - docker run -e CI=true ishantoberoi/docker-react npm run test
